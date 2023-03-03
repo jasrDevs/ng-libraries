@@ -1,0 +1,24 @@
+.jar-header {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+  &__default-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__logo {
+    display: flex;
+    align-items: center;
+    &__complement {
+      display: none;
+      @media (min-width: 992px) {
+        display: block !important;
+      }
+    }
+  }
+}

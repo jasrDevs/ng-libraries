@@ -1,1 +1,13 @@
-<p>header works</p>
+<header id="header" class="header jar-header">
+  <div class="jar-header__default-content">
+    <a routerLink="/dashboard" class="logo jar-header__logo">
+      <img src="favicon.ico" alt="" />
+      <span class="jar-header__logo__complement"> Admin </span>
+    </a>
+    <i
+      (click)="sidebarToggle()"
+      class="bi bi-list toggle-sidebar-btn jar-header__toggle-sidebar-btn"
+    ></i>
+  </div>
+  <ng-content select="[custom]"></ng-content>
+</header>
