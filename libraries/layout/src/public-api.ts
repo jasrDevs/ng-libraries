@@ -2,6 +2,9 @@
  * Public API Surface of @jasr-devs/ng-layout
  */
 
-export * from './lib/layout.service';
-export * from './lib/layout.component';
-export * from './lib/layout.module';
+export * from './footer/footer.component';
+export * from './header/header.component';
+export * from './sidebar/sidebar.component';
+export * from './sidenav/sidenav.component';
+export * from './layout.component';
+export * from './layout.module';

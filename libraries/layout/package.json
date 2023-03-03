@@ -1,5 +1,7 @@
 {
   "name": "@jasr-devs/ng-layout",
   "version": "1.0.0",
-  "peerDependencies": {}
+  "peerDependencies": {
+    "@jasr-devs/ng-perfect-scrollbar": "1.0.0"
+  }
 }
