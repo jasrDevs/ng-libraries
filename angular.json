@@ -123,6 +123,36 @@
           }
         }
       }
+    },
+    "perfect-scrollbar": {
+      "projectType": "library",
+      "root": "libraries/perfect-scrollbar",
+      "sourceRoot": "libraries/perfect-scrollbar/src",
+      "prefix": "jar",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "libraries/perfect-scrollbar/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libraries/perfect-scrollbar/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "libraries/perfect-scrollbar/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "libraries/perfect-scrollbar/tsconfig.spec.json",
+            "polyfills": ["zone.js", "zone.js/testing"]
+          }
+        }
+      }
     }
   }
 }
