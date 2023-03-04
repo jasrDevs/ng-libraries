@@ -1,4 +1,10 @@
-import { ChangeDetectionStrategy, Component, Inject, ViewEncapsulation } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  Inject,
+  Input,
+  ViewEncapsulation,
+} from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 
 @Component({
@@ -8,6 +14,10 @@ import { DOCUMENT } from '@angular/common';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class JarHeader {
+  @Input() appTitle = '';
+  @Input() appIcon = '';
+  @Input() initialPage = '';
+
   constructor(@Inject(DOCUMENT) private document: Document) {}
 
   public sidebarToggle(): void {

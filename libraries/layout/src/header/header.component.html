@@ -1,8 +1,8 @@
 <header id="header" class="header jar-header">
   <div class="jar-header__default-content">
-    <a routerLink="/dashboard" class="logo jar-header__logo">
-      <img src="favicon.ico" alt="" />
-      <span class="jar-header__logo__complement"> Admin </span>
+    <a [routerLink]="initialPage" class="logo jar-header__logo">
+      <img [src]="appIcon" alt="app icon" />
+      <span class="jar-header__logo__complement"> {{ appTitle }} </span>
     </a>
     <i
       (click)="sidebarToggle()"

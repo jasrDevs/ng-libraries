@@ -1,6 +1,16 @@
-<jar-header><div custom>header works</div></jar-header>
-<jar-sidebar></jar-sidebar>
-<div class="jar-layout__ng-content-container">
-  <ng-content></ng-content>
+<div class="app-loader" [class.d-none]="resourcesLoaded">
+  <div class="spinner">
+    <div class="double-bounce1"></div>
+    <div class="double-bounce2"></div>
+  </div>
 </div>
-<jar-footer><div custom>footer works</div></jar-footer>
+<div [class.d-none]="!resourcesLoaded">
+  <jar-header [appTitle]="appTitle" [appIcon]="appIcon" [initialPage]="initialPage">
+    <ng-content custom select="[jar-custom-header]"></ng-content>
+  </jar-header>
+  <jar-sidebar [sidenav]="sidenav" [authorities]="authorities" [context]="context"></jar-sidebar>
+  <main id="main" class="main">
+    <ng-content></ng-content>
+  </main>
+  <jar-footer><ng-content custom select="[jar-custom-footer]"></ng-content></jar-footer>
+</div>

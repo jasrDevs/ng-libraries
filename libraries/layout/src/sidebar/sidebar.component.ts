@@ -1,4 +1,5 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import { JarLaySnavItems } from '../navigation';
 
 @Component({
   selector: 'jar-sidebar',
@@ -6,4 +7,10 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   templateUrl: './sidebar.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class JarSidebar {}
+export class JarSidebar {
+  @Input() authorities: any | any[];
+
+  @Input() context: any | any[];
+
+  @Input() sidenav: JarLaySnavItems[] = [];
+}

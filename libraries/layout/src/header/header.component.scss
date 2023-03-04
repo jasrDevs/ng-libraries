@@ -14,8 +14,13 @@
   &__logo {
     display: flex;
     align-items: center;
+    text-decoration: none;
     &__complement {
       display: none;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-size: 20px;
       @media (min-width: 992px) {
         display: block !important;
       }

@@ -1,3 +1,12 @@
-<jar-layout>
+<jar-layout
+  appTitle="Custom app title"
+  appIcon="favicon.ico"
+  initialPage="home/dashboard"
+  [sidenav]="sidenav"
+  [authorities]="authorities"
+  [context]="context"
+>
+  <div jar-custom-header>header works</div>
+  <div jar-custom-footer>footer works</div>
   <router-outlet></router-outlet>
 </jar-layout>
