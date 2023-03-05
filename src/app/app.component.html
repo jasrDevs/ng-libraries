@@ -2,12 +2,16 @@
   appTitle="Custom app title"
   appIcon="favicon.ico"
   initialPage="home"
-  [includeBreadcrumbs]="true"
+  [includeBreadcrumbs]="includeBreadcrumbs"
   [authorities]="authorities"
   [context]="context"
   [sidenav]="sidenav"
 >
-  <div jar-custom-header>header works</div>
+  <div jar-custom-header>
+    <button (click)="toggleTheme()">toggle theme</button>
+    <button (click)="toggleBreadcrumbs()">toggle breadcrumbs</button>
+    <button (click)="toggleSecurity()">toggle security</button>
+  </div>
   <div jar-custom-footer>footer works</div>
   <router-outlet></router-outlet>
 </jar-layout>

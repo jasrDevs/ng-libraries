@@ -9,8 +9,29 @@ import { Authorities, SIDE_NAV } from './navigation';
 })
 export class AppComponent implements OnInit {
   public sidenav = SIDE_NAV;
-  public authorities = [Authorities.HOME, Authorities.FORMS, Authorities.ELEMENTS];
-  public context = 'MEDELLIN';
+  public authorities: any = [Authorities.HOME, Authorities.FORMS, Authorities.ELEMENTS];
+  public context: any = 'MEDELLIN';
+
+  public includeBreadcrumbs = false;
+
+  public toggleTheme(): void {
+    document.body.classList.toggle('dark-theme');
+  }
+
+  public toggleBreadcrumbs() {
+    if (this.includeBreadcrumbs) this.includeBreadcrumbs = false;
+    else this.includeBreadcrumbs = true;
+  }
+
+  public toggleSecurity() {
+    if (this.authorities) {
+      this.authorities = undefined;
+      this.context = undefined;
+    } else {
+      this.authorities = [Authorities.HOME, Authorities.FORMS, Authorities.ELEMENTS];
+      this.context = 'MEDELLIN';
+    }
+  }
 
   public ngOnInit(): void {
     setTimeout(() => {
