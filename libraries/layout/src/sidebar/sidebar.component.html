@@ -12,6 +12,7 @@
           class="nav-link collapsed"
           routerLinkActive="jar-snav__active-link"
           [routerLink]="item.url"
+          (click)="closeAtClicOnMobiles()"
         >
           <i class="bi bi-grid"></i> <span>{{ item.name }}</span>
         </a>
