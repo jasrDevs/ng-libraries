@@ -5,7 +5,6 @@ import {
   Component,
   Input,
   OnInit,
-  ViewEncapsulation,
 } from '@angular/core';
 import {
   ActivatedRoute,
@@ -18,9 +17,9 @@ import {
 } from '@angular/router';
 import { Title } from '@angular/platform-browser';
 import { filter, Subscription } from 'rxjs';
+import { JarLaySnavItems, LAYOUT_RESOURCES_LOADED } from './navigation';
 import { RoutePartsService } from './services';
 import initLayout from './layout.bundle';
-import { JarLaySnavItems, LAYOUT_RESOURCES_LOADED } from './navigation';
 
 @Component({
   selector: 'jar-layout',
@@ -31,6 +30,7 @@ export class JarLayout implements OnInit, AfterViewInit {
   @Input() appTitle = 'JASR JW';
   @Input() appIcon = 'favicon.ico';
   @Input() initialPage = 'dashboard';
+  @Input() includeBreadcrumbs = false;
 
   @Input() sidenav: JarLaySnavItems[] = [];
 

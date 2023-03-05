@@ -5,51 +5,42 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 
-@media (max-width: 1199px) {
-  .sidebar {
+@media (max-width: calc($XXL_RESOLUTION - 1px)) {
+  .jar-sidebar {
     left: -300px;
   }
 }
-.sidebar::-webkit-scrollbar {
-  width: 5px;
-  height: 8px;
-  background-color: #fff;
-}
-.sidebar::-webkit-scrollbar-thumb {
-  background-color: #aab7cf;
-}
-
-@media (min-width: 1200px) {
-  #main {
+@media (min-width: $XXL_RESOLUTION) {
+  #jar-lay-main {
     margin-left: 300px;
   }
 }
-@media (max-width: 1199px) {
-  .toggle-sidebar .sidebar {
+@media (max-width: calc($XXL_RESOLUTION - 1px)) {
+  .toggle-sidebar .jar-sidebar {
     left: 0;
   }
 }
-@media (min-width: 1200px) {
-  .toggle-sidebar #main {
+@media (min-width: $XXL_RESOLUTION) {
+  .toggle-sidebar #jar-lay-main {
     margin-left: 0;
   }
-  .toggle-sidebar .sidebar {
+  .toggle-sidebar .jar-sidebar {
     left: -300px;
   }
 }
 
-#main {
+#jar-lay-main {
   margin-top: 60px;
   padding: 20px 30px;
   transition: all 0.3s;
 }
-@media (max-width: 1199px) {
-  #main {
+@media (max-width: calc($XXL_RESOLUTION - 1px)) {
+  #jar-lay-main {
     padding: 20px;
   }
 }
 
-.main {
+.jar-lay-main {
   min-height: calc(100vh - 122px);
 }
 .loader-hidden {
@@ -66,7 +57,6 @@
   --bs-body-font-size: 1rem;
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.5;
-  --bs-body-bg: #f6f9ff;
   *,
   ::after,
   ::before {
@@ -77,9 +67,9 @@
   font-size: var(--bs-body-font-size);
   font-weight: var(--bs-body-font-weight);
   line-height: var(--bs-body-line-height);
-  color: var(--bs-body-color);
+  color: var(--jar-body-color);
   text-align: var(--bs-body-text-align);
-  background-color: var(--bs-body-bg);
+  background-color: var(--jar-body-background-color);
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: transparent;
 }

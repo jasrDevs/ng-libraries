@@ -1,4 +1,4 @@
-import { JarBrandingSidenav, JarLaySnavItems } from 'libraries/layout';
+import { JarLaySnavItems } from '@jasr-devs/ng-layout';
 
 export enum Authorities {
   HOME = '0000',
@@ -8,24 +8,19 @@ export enum Authorities {
   EDITORS = '0004',
 }
 
-export const LAY_CONFIG: JarBrandingSidenav = {
-  icon: 'favicon.ico',
-  name: 'Grupo Clínica Médicos',
-};
-
 export const SIDE_NAV: JarLaySnavItems[] = [
   {
     type: 'link',
-    name: 'Dashboard',
-    url: 'home/dashboard',
+    name: 'Home',
+    url: 'home',
     authorities: [Authorities.HOME],
   },
   {
-    type: 'accordion',
+    type: 'dropdown',
     name: 'Forms',
     url: 'forms',
     authorities: [Authorities.FORMS],
-    accordionLinks: [
+    dropdownLinks: [
       {
         name: 'Form Elements',
         url: 'form-elements',

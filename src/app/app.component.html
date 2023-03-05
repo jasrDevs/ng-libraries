@@ -1,10 +1,11 @@
 <jar-layout
   appTitle="Custom app title"
   appIcon="favicon.ico"
-  initialPage="home/dashboard"
-  [sidenav]="sidenav"
+  initialPage="home"
+  [includeBreadcrumbs]="true"
   [authorities]="authorities"
   [context]="context"
+  [sidenav]="sidenav"
 >
   <div jar-custom-header>header works</div>
   <div jar-custom-footer>footer works</div>

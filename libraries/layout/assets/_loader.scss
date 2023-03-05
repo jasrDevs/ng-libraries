@@ -51,12 +51,12 @@
   animation-delay: -1s;
 }
 .jar-view-loader {
-  display: block;
-  background: rgba(255, 255, 255, 0.3);
-  z-index: 998;
+  background: var(--jar-loader-overlay-background-color);
   max-height: calc(100vh);
-  margin: auto;
+  display: block;
   display: flex;
+  z-index: 995;
+  margin: auto;
 }
 .jar-view-loader * {
   margin: auto;

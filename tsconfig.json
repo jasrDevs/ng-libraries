@@ -9,7 +9,7 @@
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
     "paths": {
-      "@jasr-devs/ng-layout": ["dist/layout"],
+      "@jasr-devs/ng-layout": ["libraries/layout"],
       "@jasr-devs/ng-perfect-scrollbar": ["dist/perfect-scrollbar"]
     },
     "noImplicitReturns": true,

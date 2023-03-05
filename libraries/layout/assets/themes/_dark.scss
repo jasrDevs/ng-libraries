@@ -1,0 +1,30 @@
+.jar-layout.dark-theme {
+  // Body
+  --jar-body-background-color: rgb(37, 39, 53);
+  --jar-body-color: #ececec;
+  // Generic
+  --jar-overlay-background-color: rgba(150, 150, 150, 0.12);
+  --jar-loader-overlay-background-color: rgba(150, 150, 150, 0.12);
+  // Breadcrumbs
+  --jar-breadcrumb-color: #d1d1d1;
+  --jar-breadcrumb-active-color: #ececec;
+  --jar-breadcrumb-title-color: #ececec;
+  // Header
+  --jar-header-box-shadow: none;
+  --jar-header-background-color: rgb(54, 57, 76);
+  --jar-header-logo-color: #3d84ff;
+  --jar-header-bottom-border: rgb(255, 255, 255, 0.12);
+
+  // Sidebar
+  --jar-sidebar-recurrent-color-1: #fff;
+  --jar-sidebar-recurrent-color-2: #d1d1d1;
+  --jar-sidebar-scrollbar-color: #aab7cf;
+  --jar-sidebar-box-shadow: none;
+  --jar-sidebar-right-border: rgb(255, 255, 255, 0.12);
+  --jar-sidebar-background-color: rgb(54, 57, 76);
+  --jar-sidebar-nav-link-background-color: rgb(100, 105, 138);
+  --jar-sidebar-nav-link-collapsed-background-color: rgb(54, 57, 76);
+  // Footer
+  --jar-footer-background-color: rgb(37, 39, 53);
+  --jar-footer-border-top: rgb(255, 255, 255, 0.12);
+}

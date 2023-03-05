@@ -9,8 +9,9 @@
   transition: all 0.5s;
   z-index: 997;
   height: 60px;
-  box-shadow: 0px 2px 20px rgba(1, 41, 112, 0.1);
-  background-color: #fff;
+  border-bottom: 1px solid var(--jar-header-bottom-border);
+  box-shadow: 0px 2px 20px var(--jar-header-box-shadow);
+  background-color: var(--jar-header-background-color);
   padding-left: 20px;
   &__default-content {
     display: flex;
@@ -30,10 +31,10 @@
       width: 200px;
       font-size: 20px;
       font-weight: 700;
-      color: #012970;
+      color: var(--jar-header-logo-color);
       font-family: 'Nunito', sans-serif;
     }
-    @media (min-width: 1200px) {
+    @media (min-width: $XXL_RESOLUTION) {
       span {
         width: 280px;
       }
@@ -53,6 +54,6 @@
     font-size: 32px;
     padding-left: 10px;
     cursor: pointer;
-    color: #012970;
+    color: var(--jar-header-logo-color);
   }
 }

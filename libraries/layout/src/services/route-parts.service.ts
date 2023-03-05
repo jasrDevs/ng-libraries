@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Router, ActivatedRouteSnapshot, Params } from '@angular/router';
+import { ActivatedRouteSnapshot, Params } from '@angular/router';
 
 interface IRoutePart {
   title: string;

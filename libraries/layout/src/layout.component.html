@@ -9,13 +9,14 @@
     <ng-content custom select="[jar-custom-header]"></ng-content>
   </jar-header>
   <jar-sidebar [sidenav]="sidenav" [authorities]="authorities" [context]="context"></jar-sidebar>
-  <main id="main" class="main">
+  <main id="jar-lay-main" class="jar-lay-main">
     <div class="jar-view-loader" style="position: fixed" *ngIf="isModuleLoading">
       <div class="jar-spinner">
         <div class="jar-double-bounce1"></div>
         <div class="jar-double-bounce2"></div>
       </div>
     </div>
+    <jar-breadcrumb [class.jar-breadcrumb-hidden]="includeBreadcrumbs"></jar-breadcrumb>
     <ng-content></ng-content>
   </main>
   <jar-footer><ng-content custom select="[jar-custom-footer]"></ng-content></jar-footer>

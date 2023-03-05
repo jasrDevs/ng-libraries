@@ -1,0 +1,11 @@
+<div class="jar-breadcrumb-pagetitle">
+  <h1>{{ title }}</h1>
+  <nav>
+    <ol class="jar-breadcrumb">
+      <li class="jar-breadcrumb-item">
+        <span>{{ base }}</span>
+      </li>
+      <li class="jar-breadcrumb-item active" *ngIf="!singleRoute">{{ title }}</li>
+    </ol>
+  </nav>
+</div>

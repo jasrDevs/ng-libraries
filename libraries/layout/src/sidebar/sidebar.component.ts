@@ -1,4 +1,5 @@
-import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Inject, Input } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
 import { JarLaySnavItems } from '../navigation';
 
 @Component({
@@ -12,4 +13,16 @@ export class JarSidebar {
   @Input() context: any | any[];
 
   @Input() sidenav: JarLaySnavItems[] = [];
+
+  constructor(@Inject(DOCUMENT) private document: Document) {}
+
+  public sidebarToggle(): void {
+    this.document.body.classList.toggle('toggle-sidebar');
+  }
+
+  public closeAtClicOnMobiles() {
+    if (window.matchMedia(`(max-width:1199px)`).matches) {
+      this.sidebarToggle();
+    }
+  }
 }

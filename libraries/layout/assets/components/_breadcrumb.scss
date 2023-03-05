@@ -1,0 +1,41 @@
+.jar-breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 0;
+  margin-bottom: 1rem;
+  list-style: none;
+  font-size: 14px;
+  font-family: 'Nunito', sans-serif;
+  color: var(--jar-breadcrumb-color);
+  font-weight: 600;
+  margin: 0;
+  &-pagetitle {
+    margin-bottom: 10px;
+    & h1 {
+      font-size: 20px;
+      margin-bottom: 0;
+      font-weight: 600;
+      color: var(--jar-breadcrumb-title-color);
+      margin-top: 0px;
+    }
+  }
+  &-item {
+    + .jar-breadcrumb-item::before {
+      float: left;
+
+      padding-right: 0.5rem;
+      content: '/';
+    }
+  }
+  & .jar-breadcrumb-item::before {
+    color: var(--jar-breadcrumb-color);
+  }
+  & .active {
+    color: var(--jar-breadcrumb-active-color);
+    font-weight: 600;
+    margin-left: 10px;
+  }
+  &-hidden {
+    display: none !important;
+  }
+}

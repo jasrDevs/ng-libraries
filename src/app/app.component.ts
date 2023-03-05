@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { LAYOUT_RESOURCES_LOADED } from 'libraries/layout';
+import { LAYOUT_RESOURCES_LOADED } from '@jasr-devs/ng-layout';
 import { Authorities, SIDE_NAV } from './navigation';
 
 @Component({
