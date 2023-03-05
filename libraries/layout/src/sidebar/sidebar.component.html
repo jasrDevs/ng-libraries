@@ -1,5 +1,5 @@
-<aside id="sidebar" class="sidebar">
-  <ul class="sidebar-nav" id="sidebar-nav">
+<aside id="jar-sidebar" class="jar-sidebar">
+  <ul class="jar-sidebar-nav" id="jar-sidebar-nav">
     <div *ngFor="let item of sidenav; let i = index">
       <li
         class="nav-item"
@@ -33,7 +33,7 @@
           <i class="bi bi-journal-text"></i><span>{{ item.name }}</span>
           <i class="bi bi-chevron-down ms-auto"></i>
         </a>
-        <ul id="jar-snav-acc{{ i }}" class="nav-content collapse" data-bs-parent="#sidebar-nav">
+        <ul id="jar-snav-acc{{ i }}" class="nav-content collapse" data-bs-parent="#jar-sidebar-nav">
           <li *ngFor="let link of item.accordionLinks">
             <a
               [class.jar-snav__not-exist]="

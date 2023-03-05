@@ -1,0 +1,58 @@
+.jar-header {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+  transition: all 0.5s;
+  z-index: 997;
+  height: 60px;
+  box-shadow: 0px 2px 20px rgba(1, 41, 112, 0.1);
+  background-color: #fff;
+  padding-left: 20px;
+  &__default-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    line-height: 1;
+    img {
+      max-height: 26px;
+      margin-right: 6px;
+    }
+    span {
+      width: 200px;
+      font-size: 20px;
+      font-weight: 700;
+      color: #012970;
+      font-family: 'Nunito', sans-serif;
+    }
+    @media (min-width: 1200px) {
+      span {
+        width: 280px;
+      }
+      width: 280px;
+    }
+    &__complement {
+      display: none;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      @media (min-width: 992px) {
+        display: block !important;
+      }
+    }
+  }
+  .toggle-sidebar-btn {
+    font-size: 32px;
+    padding-left: 10px;
+    cursor: pointer;
+    color: #012970;
+  }
+}

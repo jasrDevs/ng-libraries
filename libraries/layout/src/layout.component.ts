@@ -5,6 +5,7 @@ import {
   Component,
   Input,
   OnInit,
+  ViewEncapsulation,
 } from '@angular/core';
 import {
   ActivatedRoute,
@@ -24,7 +25,6 @@ import { JarLaySnavItems, LAYOUT_RESOURCES_LOADED } from './navigation';
 @Component({
   selector: 'jar-layout',
   templateUrl: './layout.component.html',
-  styleUrls: ['./layout.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class JarLayout implements OnInit, AfterViewInit {
@@ -103,7 +103,6 @@ export class JarLayout implements OnInit, AfterViewInit {
     window.scroll({
       top: 0,
       left: 0,
-      behavior: 'smooth',
     });
   }
 

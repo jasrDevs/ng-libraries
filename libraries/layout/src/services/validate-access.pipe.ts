@@ -63,10 +63,6 @@ export class ValidateAccessPipe implements PipeTransform {
       }
     }
 
-    console.log(user);
-    console.log(_valuesToCompare);
-    console.log(!(contextIsValid && permissionsIsValid));
-
     return !(contextIsValid && permissionsIsValid);
   }
 }
