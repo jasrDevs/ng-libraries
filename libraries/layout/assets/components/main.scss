@@ -1,0 +1,44 @@
+$SM_RESOLUTION: 360px;
+$MD_RESOLUTION: 640px;
+$LG_RESOLUTION: 720px;
+$XL_RESOLUTION: 960px;
+$XXL_RESOLUTION: 1200px;
+
+:root {
+  // Body
+  --jar-body-background-color: #f6f9ff;
+  --jar-body-color: #000;
+  // Generic
+  --jar-overlay-background-color: rgb(0, 0, 0, 0.6);
+  --jar-loader-overlay-background-color: rgba(255, 255, 255, 0.6);
+  // Breadcrumbs
+  --jar-breadcrumb-color: #899bbd;
+  --jar-breadcrumb-active-color: #51678f;
+  --jar-breadcrumb-title-color: #012970;
+  // Header
+  --jar-header-box-shadow: rgba(1, 41, 112, 0.1);
+  --jar-header-background-color: #fff;
+  --jar-header-logo-color: #012970;
+  --jar-header-bottom-border: none;
+  // Sidebar
+  --jar-sidebar-recurrent-color-1: #4154f1;
+  --jar-sidebar-recurrent-color-2: #012970;
+  --jar-sidebar-scrollbar-color: #aab7cf;
+  --jar-sidebar-box-shadow: 0px 0px 20px rgba(1, 41, 112, 0.1);
+  --jar-sidebar-right-border: none;
+  --jar-sidebar-background-color: #fff;
+  --jar-sidebar-webkit-scrollbar-background-color: #fff;
+  --jar-sidebar-webkit-scrollbar-thumb-background-color: #aab7cf;
+  --jar-sidebar-nav-link-background-color: #f6f9ff;
+  --jar-sidebar-nav-link-collapsed-background-color: #fff;
+  --jar-sidebar-nav-link-collapsed-color: #899bbd;
+  // Footer
+  --jar-footer-background-color: #f6f9ff;
+  --jar-footer-border-top: #cddfff;
+}
+
+@import 'breadcrumb';
+@import 'footer';
+@import 'header';
+@import 'layout';
+@import 'sidebar';

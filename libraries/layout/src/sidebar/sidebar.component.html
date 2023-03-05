@@ -1,0 +1,56 @@
+<aside id="jar-sidebar" class="jar-sidebar">
+  <ul class="jar-sidebar-nav" id="jar-sidebar-nav">
+    <div *ngFor="let item of sidenav; let i = index">
+      <li
+        class="nav-item"
+        [class.jar-snav__not-exist]="
+          [authorities, item.disableOnContexts!] | validateAccess : [context, item.authorities!]
+        "
+        *ngIf="item.type === 'link'"
+      >
+        <a
+          class="nav-link collapsed"
+          routerLinkActive="jar-snav__active-link"
+          [routerLink]="item.url"
+          (click)="closeAtClicOnMobiles()"
+        >
+          <i class="bi bi-grid"></i> <span>{{ item.name }}</span>
+        </a>
+      </li>
+
+      <li
+        class="nav-item"
+        [class.jar-snav__not-exist]="
+          [authorities, item.disableOnContexts!] | validateAccess : [context, item.authorities!]
+        "
+        *ngIf="item.type === 'dropdown'"
+      >
+        <a
+          class="nav-link collapsed"
+          [attr.data-bs-target]="'#jar-snav-acc' + i"
+          data-bs-toggle="collapse"
+          href="#"
+        >
+          <i class="bi bi-journal-text"></i><span>{{ item.name }}</span>
+          <i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="jar-snav-acc{{ i }}" class="nav-content collapse" data-bs-parent="#jar-sidebar-nav">
+          <li *ngFor="let link of item.dropdownLinks">
+            <a
+              [class.jar-snav__not-exist]="
+                [authorities, link.disableOnContexts!]
+                  | validateAccess : [context, link.authorities!]
+              "
+              routerLinkActive="jar-snav__active-link"
+              [routerLink]="link.urlIsNotAutoCompleted ? link.url : item.url + '/' + link.url"
+              (click)="closeAtClicOnMobiles()"
+            >
+              <i class="bi bi-circle"></i><span>{{ link.name }}</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+    </div>
+  </ul>
+</aside>
+<button class="jar-overlay-toggle-btn" (click)="sidebarToggle()"></button>

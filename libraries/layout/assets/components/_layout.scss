@@ -1,0 +1,75 @@
+/*!
+ * Bootstrap v5.1.3 (https://getbootstrap.com/)
+ * Copyright 2011-2021 The Bootstrap Authors
+ * Copyright 2011-2021 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
+ */
+
+@media (max-width: calc($XXL_RESOLUTION - 1px)) {
+  .jar-sidebar {
+    left: -300px;
+  }
+}
+@media (min-width: $XXL_RESOLUTION) {
+  #jar-lay-main {
+    margin-left: 300px;
+  }
+}
+@media (max-width: calc($XXL_RESOLUTION - 1px)) {
+  .toggle-sidebar .jar-sidebar {
+    left: 0;
+  }
+}
+@media (min-width: $XXL_RESOLUTION) {
+  .toggle-sidebar #jar-lay-main {
+    margin-left: 0;
+  }
+  .toggle-sidebar .jar-sidebar {
+    left: -300px;
+  }
+}
+
+#jar-lay-main {
+  margin-top: 60px;
+  padding: 20px 30px;
+  transition: all 0.3s;
+}
+@media (max-width: calc($XXL_RESOLUTION - 1px)) {
+  #jar-lay-main {
+    padding: 20px;
+  }
+}
+
+.jar-lay-main {
+  min-height: calc(100vh - 122px);
+}
+.loader-hidden {
+  display: none !important;
+}
+
+.jar-layout {
+  --bs-font-sans-serif: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
+    'Noto Sans', 'Liberation Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol', 'Noto Color Emoji';
+  --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New',
+    monospace;
+  --bs-body-font-family: var(--bs-font-sans-serif);
+  --bs-body-font-size: 1rem;
+  --bs-body-font-weight: 400;
+  --bs-body-line-height: 1.5;
+  *,
+  ::after,
+  ::before {
+    box-sizing: border-box;
+  }
+  margin: 0;
+  font-family: var(--bs-body-font-family);
+  font-size: var(--bs-body-font-size);
+  font-weight: var(--bs-body-font-weight);
+  line-height: var(--bs-body-line-height);
+  color: var(--jar-body-color);
+  text-align: var(--bs-body-text-align);
+  background-color: var(--jar-body-background-color);
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}

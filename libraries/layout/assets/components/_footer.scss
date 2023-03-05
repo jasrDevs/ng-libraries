@@ -1,0 +1,15 @@
+.jar-footer {
+  background-color: var(--jar-footer-background-color);
+  padding: 20px 0;
+  font-size: 14px;
+  transition: all 0.3s;
+  border-top: 1px solid var(--jar-footer-border-top);
+}
+@media (min-width: $XXL_RESOLUTION) {
+  #jar-footer {
+    margin-left: 300px;
+  }
+  .toggle-sidebar #jar-footer {
+    margin-left: 0;
+  }
+}

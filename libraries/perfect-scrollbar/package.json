@@ -1,0 +1,12 @@
+{
+  "name": "@jasr-devs/ng-perfect-scrollbar",
+  "version": "1.0.0",
+  "license": "MIT",
+  "contributors": [
+    "ejdao"
+  ],
+  "peerDependencies": {
+    "@juggle/resize-observer": "^3.4.0",
+    "perfect-scrollbar": "^1.5.5"
+  }
+}

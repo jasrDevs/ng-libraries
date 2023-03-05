@@ -1,0 +1,13 @@
+<header id="jar-header" class="jar-header">
+  <div class="jar-header__default-content">
+    <a [routerLink]="initialPage" class="jar-header__logo">
+      <img [src]="appIcon" alt="app icon" />
+      <span class="jar-header__logo__complement"> {{ appTitle }} </span>
+    </a>
+    <i
+      (click)="sidebarToggle()"
+      class="bi bi-list toggle-sidebar-btn jar-header__toggle-sidebar-btn"
+    ></i>
+  </div>
+  <ng-content select="[custom]"></ng-content>
+</header>
